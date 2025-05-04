@@ -17,7 +17,7 @@ fi
 
 # Rebuild the ChromaDB collection
 echo "Rebuilding vector database..."
-python /app/rebuild_chroma.py
+python /app/scripts/rebuild_chroma.py
 
 # Start the FastAPI backend in the background
 echo "Starting FastAPI server..."
