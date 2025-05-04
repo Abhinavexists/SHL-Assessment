@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+
+# Data 
+app/data/shl_catalog.json
+app/data/shl_catalog.csv
+app/data/chroma_db/
+app/data/evaluation_results.json
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db 
