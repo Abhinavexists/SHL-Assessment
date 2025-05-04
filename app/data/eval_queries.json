@@ -1,0 +1,75 @@
+[
+  {
+    "query": "I am hiring for Java developers who can also collaborate effectively with my business teams. Looking for an assessment(s) that can be completed in 40 minutes.",
+    "constraints": {
+      "max_duration": 40,
+      "skills": ["Java", "collaboration"],
+      "test_types": ["Technical"]
+    }
+  },
+  {
+    "query": "Looking to hire mid-level professionals who are proficient in Python, SQL and Java Script. Need an assessment package that can test all skills with max duration of 60 minutes.",
+    "constraints": {
+      "max_duration": 60,
+      "skills": ["Python", "SQL", "JavaScript"],
+      "test_types": ["Technical"]
+    }
+  },
+  {
+    "query": "I am hiring for an analyst and want to screen applications using Cognitive and personality tests, what options are available within 45 mins?",
+    "constraints": {
+      "max_duration": 45,
+      "skills": ["analytical"],
+      "test_types": ["Cognitive", "Personality/Behavioral"]
+    }
+  },
+  {
+    "query": "Need a leadership assessment for senior executives that can be administered remotely",
+    "constraints": {
+      "remote_support": "Yes",
+      "test_types": ["Leadership"]
+    }
+  },
+  {
+    "query": "Looking for adaptive assessments to test verbal and numerical reasoning skills",
+    "constraints": {
+      "adaptive_support": "Yes",
+      "skills": ["verbal reasoning", "numerical reasoning"],
+      "test_types": ["Cognitive"]
+    }
+  },
+  {
+    "query": "Need short cognitive tests under 30 minutes for entry-level positions",
+    "constraints": {
+      "max_duration": 30,
+      "test_types": ["Cognitive"]
+    }
+  },
+  {
+    "query": "Software engineer assessment for C# developers with problem-solving focus",
+    "constraints": {
+      "skills": ["C#", "problem-solving"],
+      "test_types": ["Technical", "Cognitive"]
+    }
+  },
+  {
+    "query": "Customer service representative assessment that evaluates both technical skills and personality traits",
+    "constraints": {
+      "test_types": ["Role-specific", "Personality/Behavioral"]
+    }
+  },
+  {
+    "query": "Assessments for data scientists that test R and Python skills along with analytical thinking",
+    "constraints": {
+      "skills": ["R", "Python", "analytical thinking"],
+      "test_types": ["Technical", "Cognitive"]
+    }
+  },
+  {
+    "query": "Quick personality assessment for team fit that can be completed in under 20 minutes",
+    "constraints": {
+      "max_duration": 20,
+      "test_types": ["Personality/Behavioral"]
+    }
+  }
+] 
