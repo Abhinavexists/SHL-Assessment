@@ -25,10 +25,10 @@ venv/
 ENV/
 
 # Data 
-app/data/shl_catalog.json
-app/data/shl_catalog.csv
+# app/data/shl_catalog.json
+# app/data/shl_catalog.csv
 app/data/chroma_db/
-app/data/evaluation_results.json
+# app/data/evaluation_results.json
 
 # IDE files
 .idea/

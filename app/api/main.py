@@ -9,6 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict, Any, Optional, Union
 from contextlib import asynccontextmanager
+import logging
 
 # Add the parent directory to the path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -41,14 +42,18 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# Add CORS middleware
+# Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # In production, specify your Streamlit app URL(s)
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Setup logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Input model for recommendation request
 class QueryInput(BaseModel):

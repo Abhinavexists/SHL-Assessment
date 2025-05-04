@@ -285,6 +285,55 @@ To monitor system performance:
 - ChromaDB query performance is logged at the DEBUG level
 - For production deployments, consider adding Prometheus metrics
 
+## Deployment Guide
+
+### Deploying to Streamlit Cloud and Separate API Server
+
+When deploying the Streamlit app to Streamlit Cloud while hosting the API separately:
+
+1. **Deploy the API server** (e.g., on Heroku, DigitalOcean, AWS, etc.)
+   ```bash
+   # Example deployment to Heroku
+   heroku create shl-assessment-api
+   git push heroku main
+   ```
+
+2. **Configure environment variables** in Streamlit Cloud:
+   - Add `API_URL` pointing to your deployed API (e.g., `https://shl-assessment-api.herokuapp.com`)
+
+3. **Add API URL secret** to your Streamlit Cloud app:
+   - Go to your app settings in Streamlit Cloud
+   - Add a new secret called `API_URL` with the value of your API's URL
+
+4. **Deploy to Streamlit Cloud**:
+   - Connect your repository to Streamlit Cloud
+   - Set the main file path to `app/ui/streamlit_app.py`
+   - Deploy the app
+
+### Enabling CORS on API Server
+
+For cross-origin requests to work, update the API server to enable CORS:
+
+```python
+# In app/api/main.py
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, specify your Streamlit app URL
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+```
+
+### Testing the Connection
+
+After deployment:
+1. Verify API health endpoint can be called from the Streamlit app
+2. Test recommendation functionality with a simple query
+3. Check logs on both the Streamlit and API servers for any connection issues
+
 ## License
 
 MIT License

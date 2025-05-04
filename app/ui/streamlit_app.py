@@ -6,6 +6,9 @@ from datetime import datetime
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+# Config for API URL
+API_URL = os.environ.get("API_URL", "http://localhost:8000")
+
 # Initialize session state
 if "theme" not in st.session_state:
     st.session_state.theme = "light"
@@ -294,7 +297,7 @@ with st.sidebar:
     
     # API health check
     try:
-        response = requests.get("http://localhost:8000/health", timeout=2)
+        response = requests.get(f"{API_URL}/health", timeout=2)
         if response.status_code == 200 and response.json().get("status") == "healthy":
             st.success("API is online")
         else:
@@ -359,7 +362,7 @@ def get_recommendations(query, max_results):
     try:
         with st.spinner("🔍 Analyzing your requirements..."):
             response = requests.post(
-                "http://localhost:8000/recommend",
+                f"{API_URL}/recommend",
                 json={"query": query, "max_results": max_results},
                 timeout=15
             )
