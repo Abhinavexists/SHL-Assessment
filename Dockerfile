@@ -16,4 +16,4 @@ RUN chmod +x /app/setup.sh
 EXPOSE 8000 8501
 
 # Command to run both services
-ENTRYPOINT ["/app/entrypoint.sh"] 
+ENTRYPOINT ["/app/setup.sh"] 
