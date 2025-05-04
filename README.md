@@ -3,6 +3,8 @@
 This system provides intelligent recommendations for SHL assessments based on natural language queries, job descriptions, or specific requirements.
 (This is for SHL assessment)
 
+**Note** - The application is fully functional and deployed successfully. However, API calls from the deployed Streamlit instance are currently non-operational due to network or CORS-related issues with the Heroku-hosted backend. All features work as intended in a local environment, and the issue is isolated to Heroku’s configuration.
+
 - **Proposed Solution** -> [Solution](Solution.md)
 - **Proposed Architecture** -> [Architecture](Architecture.md)
 
@@ -212,7 +214,8 @@ The recommendation API endpoint returns a JSON response with the following struc
       "description": "Multi-choice test that measures the knowledge of Python programming, databases, modules and library.",
       "duration": 11,
       "remote_support": "Yes",
-      "test_type": ["Knowledge & Skills"]
+      "test_type": ["Knowledge & Skills"],
+      "name": "Python Assessment"
     },
     {
       "url": "https://www.shl.com/solutions/products/product-catalog/view/technology-professional-8-0-job-focused-assessment/",
@@ -220,7 +223,8 @@ The recommendation API endpoint returns a JSON response with the following struc
       "description": "The Technology Job Focused Assessment assesses key behavioral attributes required for success in fast-paced environments.",
       "duration": 16,
       "remote_support": "Yes",
-      "test_type": ["Competencies", "Personality & Behaviour"]
+      "test_type": ["Competencies", "Personality & Behaviour"],
+      "name": "Technology Professional Job Focused Assessment"
     }
   ]
 }
