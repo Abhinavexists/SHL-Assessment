@@ -1,4 +1,4 @@
-# SHL Assessment Recommendation System - Solution 
+# SHL Assessment Recommendation System - Evaluation
 
 ## Approach
 
