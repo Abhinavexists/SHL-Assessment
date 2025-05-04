@@ -3,7 +3,7 @@
 This system provides intelligent recommendations for SHL assessments based on natural language queries, job descriptions, or specific requirements.
 (This is for SHL assessment)
 
-**Note** - The application is fully functional and deployed successfully. However, API calls from the deployed Streamlit instance are currently non-operational due to network or CORS-related issues with the Heroku-hosted backend. All features work as intended in a local environment, and the issue is isolated to Heroku’s configuration.
+**Note** - The application is fully functional and deployed successfully. However, API calls from the deployed Streamlit instance are currently non-operational due to network or CORS-related issues with the Railways-hosted backend. All features work as intended in a local environment, and the issue is isolated to Railway’s configuration.
 
 - **Proposed Solution** -> [Solution](Solution.md)
 - **Proposed Architecture** -> [Architecture](Architecture.md)
