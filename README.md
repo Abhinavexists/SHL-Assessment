@@ -292,7 +292,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Web Interface Preview
 
-<video width="800" controls>
-  <source src="app/Images/Interface.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![Watch the video](app/Images/Interface.png)]([https://www.youtube.com/watch?v=VIDEO_ID](https://youtu.be/L_w4DZya9lk))
+
