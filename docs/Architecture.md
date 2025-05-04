@@ -6,7 +6,7 @@ The SHL Assessment Recommendation System is a comprehensive solution designed to
 
 ## Architecture Diagram
 
-![Architecture](app/Images/Architecture.png)
+![Architecture](app/Images/architecture.png)
 
 ## Key Components
 
